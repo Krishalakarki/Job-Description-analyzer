@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "AI Job Description Analyzer",
+  "version": "1.0",
+  "description": "Analyze job descriptions using GenAI and get skill gaps & learning roadmap",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
