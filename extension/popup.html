@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>AI Job Analyzer</h2>
+  <div class="container">
+    <h2>🤖 AI Job Analyzer</h2>
 
-  <textarea id="jd" placeholder="Paste job description here..."></textarea>
+    <div class="section">
+      <label for="userSkills">Your Skills (comma-separated):</label>
+      <textarea id="userSkills" placeholder="e.g., Python, FastAPI, Basic ML, Git, Docker"></textarea>
+      <div class="hint">💡 List your current technical skills</div>
+    </div>
 
-  <button id="analyze">Analyze</button>
+    <div class="section">
+      <label for="jd">Job Description:</label>
+      <textarea id="jd" placeholder="Paste the job description here..."></textarea>
+    </div>
 
-  <pre id="result"></pre>
+    <button id="analyze">Analyze Job Match</button>
+
+    <div id="result"></div>
+  </div>
 
   <script src="popup.js"></script>
 </body>
